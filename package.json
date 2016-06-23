@@ -1,0 +1,26 @@
+{
+  "name": "progressr",
+  "version": "1.0.0",
+  "description": "A small goal tracking application.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lparkermg/progressR.git"
+  },
+  "author": "Luke Parker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lparkermg/progressR/issues"
+  },
+  "homepage": "https://github.com/lparkermg/progressR#readme",
+  "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-preset-react": "^6.5.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
