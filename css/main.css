@@ -1,0 +1,21 @@
+/*Navbar overrides*/
+.navbar.navbar-override-square{
+  border-radius:0px;
+}
+
+.navbar.navbar-purple{
+  background-color:#300066;
+  border-color:#300066;
+}
+
+.navbar-brand.white-text{
+  color:#ffffff;
+}
+/*Panel overrides*/
+
+
+
+/*Jumbotron overrides.*/
+.jumbotron.jumbotron-override-square{
+  border-radius:0px;
+}
