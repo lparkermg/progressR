@@ -1,15 +1,33 @@
 /*Navbar overrides*/
-.navbar.navbar-override-square{
+.navbar.navbar-override{
   border-radius:0px;
-}
-
-.navbar.navbar-purple{
   background-color:#300066;
   border-color:#300066;
+  color:#888888;
+}
+
+.navbar.navbar-override.no-margin{
+  margin-bottom:0px;
 }
 
 .navbar-brand.white-text{
   color:#ffffff;
+}
+
+.navbar-text.white-text{
+  color:#ffffff;
+}
+
+.navbar.navbar-sub-override{
+  border-radius:0px;
+  background-color:#190048;
+  border-color:#190048;
+  color:#888888;
+}
+
+/*Nav Link Overrides*/
+.nav>li>a{
+  color:#888888;
 }
 /*Panel overrides*/
 

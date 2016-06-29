@@ -11,6 +11,11 @@ function(ko){
     template: { require: 'text!components/App/app.html'}
   });
 
+  ko.components.register('graph',{
+    viewModel: { require: 'components/Graph/graph' },
+    template: { require: 'text!components/Graph/graph.html' }
+  });
+
   $(document).ready(function() {
     ko.applyBindings();
   });

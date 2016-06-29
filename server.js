@@ -7,6 +7,7 @@ var app = express();
 app.use('/css',express.static(path.join(__dirname + '/css')));
 app.use('/components', express.static(path.join(__dirname + '/components')));
 app.use('/libs', express.static(path.join(__dirname + '/libs')));
+app.use('/data', express.static(path.join(__dirname + '/data')));
 app.use('/main.js', express.static(path.join(__dirname + '/main.js')));
 
 //Configuration

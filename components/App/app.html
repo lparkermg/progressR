@@ -1,13 +1,62 @@
 <!--Nav Bar-->
-<nav class="navbar navbar-purple navbar-override-square" role="navigation">
+<!--ko if: showMenu-->
+<nav class="navbar navbar-override no-margin" role="navigation">
   <div class="container-fluid">
     <div class="navbar-headers">
       <a class="navbar-brand white-text" href="#">ProgressR</a>
     </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" class="navbar-link" data-bind="click: toggleSubMenu">Menu</a></li>
+    </ul>
   </div>
 </nav>
+<!--/ko-->
+<!--ko ifnot: showMenu-->
+<nav class="navbar navbar-override" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-headers">
+      <a class="navbar-brand white-text" href="#">ProgressR</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#" class="navbar-link" data-bind="click: toggleSubMenu">Menu</a></li>
+    </ul>
+  </div>
+</nav>
+<!--/ko-->
+<!--ko if: showMenu()-->
+<nav class="navbar navbar-sub-override" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-headers">
+      <p class="navbar-text white-text">Selected Graph Options</p>
+    </div>
+    <!--ko if: selectedGraphs().length >= 1-->
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="#" class="navbar-link">Remove all</a></li>
+    </ul>
+    <!--/ko-->
+
+    <ul class="nav navbar-nav navbar-right">
+      <!--ko if: selectedGraphs().length === 1-->
+        <li data-bind="click: editSelectedGraph"><a href="#" class="navbar-link">Update/Edit</a></li>
+      <!--/ko-->
+      <li><a href="#" class="navbar-link" data-bind="click: addNewGraph">Add</a></li>
+    </ul>
+  </div>
+</nav>
+<!--/ko-->
+<!--ko if: showGraphWindow() -->
+
+<!--/ko-->
 <div class="container">
   <div class="row">
-    <p>Header Stuff</p>
+    <h1>Current Goals Set:</h1>
   </div>
+  <!--ko if: graphData().length === 0-->
+  <div class="row">
+    <p><em>There are no goals #sadface... Better make some.</em></p>
+  </div>
+  <!--/ko-->
+  <!--ko foreach: graphData()-->
+    <graph params="{data:$data}"></graph>
+  <!--/ko-->
 </div>
