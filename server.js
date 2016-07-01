@@ -18,6 +18,17 @@ app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
 });
 
+//Graph data
+app.get('/graphs', function(req,res){
+  res.sendFile(path.join(__dirname+'/data/graphs.json'));
+});
+
+app.put('/graphs', function(req,res){
+  console.log('TODO: Graph updating function.');
+  console.log('It should save to /data/graphs.json');
+  console.log(req.data);
+});
+
 //Add the API Uses later.
 
 app.listen(PORT, function(){
