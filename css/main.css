@@ -71,3 +71,9 @@
   padding-top:11px;
   padding-bottom:11px;
 }
+
+.graph-pane{
+  background-color:#dddddd;
+  color:#000000;
+  margin-bottom:15px;
+}
