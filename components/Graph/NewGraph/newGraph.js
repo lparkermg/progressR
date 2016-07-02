@@ -4,19 +4,30 @@ define(
     return function(params){
       var self = this;
 
-      
-
+      self.graphTitle = ko.observable("");
+      self.graphDescription = ko.observable("");
+      self.graphMaxValue = ko.observable("");
+      self.graphCurrentValue = ko.observable("");
+      self.graphData = params.graphs || ko.observableArray([]);
       self.messagesSuccess = ko.observableArray([]);
       self.messagesError = ko.observableArray([]);
-
-      self.saveNewGraph = function(graphData){
+      console.log(self.graphData());
+      self.saveNewGraph = function(){
+        var newData = {
+          title: self.graphTitle(),
+          description: self.graphDescription(),
+          maxValue: self.graphMaxValue(),
+          currentValue: self.graphCurrentValue()
+        };
+        self.graphData.push(newData);
         saveGraphData(self.graphData(),false);
       };
 
       function saveGraphData(graphData,removedGraph){
+        var jsonString = JSON.stringify(graphData)
         var saveRequest = new XMLHttpRequest();
-        saveRequest.open('PUT','/graphs',true);
-        saveRequest.setRequestHeader('Accept','application/json');
+        saveRequest.open('POST','/graphs',true);
+        saveRequest.setRequestHeader('Content-type','application/json');
 
         saveRequest.onload = function(){
           if(this.status >= 200 && this.status < 400){
@@ -42,7 +53,8 @@ define(
         saveRequest.onerror = function(){
         };
 
-        saveRequest.send(JSON.stringify(graphData));
+        console.log(jsonString);
+        saveRequest.send(jsonString);
       }
     };
   }

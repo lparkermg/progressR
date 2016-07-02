@@ -11,7 +11,7 @@
   </div>
 </nav>
 <!--/ko-->
-<!--ko ifnot: showMenu-->
+<!--ko ifnot: showMenu()-->
 <nav class="navbar navbar-override" role="navigation">
   <div class="container-fluid">
     <div class="navbar-headers">
@@ -44,8 +44,9 @@
   </div>
 </nav>
 <!--/ko-->
-<!--ko if: showGraphWindow() -->
-  <new-graph></new-graph>
+
+<!--ko if: showGraphWindow()-->
+<new-graph params="{graphs: graphData}"></new-graph>
 <!--/ko-->
 <div class="container">
   <div class="row">

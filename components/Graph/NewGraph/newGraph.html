@@ -1,5 +1,30 @@
 <div class="container">
   <div class="row">
-    
+    <div class="top-bar">
+      <span class="pull-left">Add a New Graph</span>
+      <span class="pull-right" data-bind="click: $parent.closeGraphWindow">X</span>
+    </div>
+    <div class="main-pane">
+      <div class="input-group add-margin-sm">
+        <span class="input-group-addon" id="title-addon">Title:</span>
+        <input type="text" class="form-control" data-bind="value: graphTitle" placeholder="Graph Title" aria-describedby="title-addon"></input>
+      </div>
+      <div class="input-group add-margin-sm">
+        <span class="input-group-addon" id="desc-addon">Description:</span>
+        <input type="text" class="form-control" data-bind="value: graphDescription" placeholder="Graph Description" aria-describedby="desc-addon"></input>
+      </div>
+      <div class="input-group add-margin-sm">
+        <span class="input-group-addon" id="max-addon">Max Value:</span>
+        <input type="text" class="form-control" data-bind="value: graphMaxValue" placeholder="0" aria-describedby="max-addon"></input>
+      </div>
+      <div class="input-group add-margin-sm">
+        <span class="input-group-addon" id="current-val-addon">Current Value:</span>
+        <input type="text" class="form-control" data-bind="value: graphCurrentValue" placeholder="0" aria-describedby="current-val-addon"></input>
+      </div>
+      <hr>
+      <div class="btn-group full-width">
+        <button type="button" class="btn full-width btn-primary" data-bind="click: saveNewGraph">Save</button>
+      </div>
+    </div>
   </div>
 </div>

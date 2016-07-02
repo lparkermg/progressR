@@ -29,11 +29,45 @@
 .nav>li>a{
   color:#888888;
 }
-/*Panel overrides*/
+/*Panel Overrides*/
 
+/*Input Group Overrides.*/
+.input-group.add-margin-sm{
+  margin-bottom:10px;
+}
 
+/*Btn Group Overrides*/
+.btn-group.full-width{
+  width:100%;
+}
 
-/*Jumbotron overrides.*/
+/*Btn Overrides*/
+.btn.full-width{
+  width:100%;
+}
+
+/*Jumbotron Overrides.*/
 .jumbotron.jumbotron-override-square{
   border-radius:0px;
+}
+
+/*Homebrew stuff*/
+.top-bar{
+  height:40px;
+  background-color:#000000;
+  color:#ffffff;
+  padding-left:11px;
+  padding-right:11px;
+  padding-top:6px;
+  padding-bottom:6px;
+  font-size:18px;
+}
+
+.main-pane{
+  background-color:#cccccc;
+  color:#000000;
+  padding-left:11px;
+  padding-right:11px;
+  padding-top:11px;
+  padding-bottom:11px;
 }
